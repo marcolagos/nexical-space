@@ -5,14 +5,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // Content Security Policy (CSP) rules
 const ContentSecurityPolicy = `
-  default-src 'self'; // Default source is the same origin
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is; // Allow scripts from specific sources
-  style-src 'self' 'unsafe-inline'; // Allow inline styles
-  img-src * blob: data:; // Allow loading images from any source, blob, or data URIs
-  media-src *.s3.amazonaws.com; // Allow loading media from S3 AWS
-  connect-src *; // Allow connections to any origin
-  font-src 'self'; // Allow loading fonts from the same origin
-  frame-src giscus.app // Allow embedding content from giscus.app in iframes
+  default-src 'self' 'unsafe-eval';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is;
+  style-src 'self' 'unsafe-inline';
+  img-src * blob: data:;
+  media-src *.s3.amazonaws.com;
+  connect-src *;
+  font-src 'self';
+  frame-src giscus.app;
 `
 
 // Security headers
