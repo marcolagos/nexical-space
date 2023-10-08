@@ -1,8 +1,19 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import 'css/tailwind.css'
+import 'pliny/search/algolia.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next'
+import { Space_Grotesk } from 'next/font/google'
+import { ThemeProviders } from './theme-providers'
+import Container from '@/components/Container'
+import siteMetadata from '@/data/siteMetadata'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+
+const space_grotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,8 +22,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang={siteMetadata.language}
+      className={`${space_grotesk.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
+      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+        <ThemeProviders>
+          <Container>
+            <div className="flex h-screen flex-col justify-between font-sans">
+              <Header />
+              <main className="mb-auto">{children}</main>
+            </div>
+            <Footer />
+          </Container>
+        </ThemeProviders>
+      </body>
     </html>
   )
 }
