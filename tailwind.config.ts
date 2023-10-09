@@ -28,16 +28,16 @@ module.exports = {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
       },
       colors: {
-        primary: colors.green,
-        gray: colors.gray,
+        primary: colors.yellow,
+        gray: colors.neutral,
       },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.primary.500'),
+              color: theme('colors.primary.300'),
               '&:hover': {
-                color: `${theme('colors.primary.600')}`,
+                color: `${theme('colors.primary.500')}`,
               },
               code: { color: theme('colors.primary.400') },
             },
@@ -56,9 +56,9 @@ module.exports = {
         invert: {
           css: {
             a: {
-              color: theme('colors.primary.500'),
+              color: theme('colors.yellow.300'),
               '&:hover': {
-                color: `${theme('colors.primary.400')}`,
+                color: `${theme('colors.indigo.500')}`,
               },
               code: { color: theme('colors.primary.400') },
             },
