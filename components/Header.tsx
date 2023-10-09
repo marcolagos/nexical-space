@@ -1,5 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
+import { headerNavLinks } from '@/data/navigationLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
@@ -32,7 +32,7 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className="hidden sm:block font-medium text-gray-900 dark:text-gray-100"
+              className="hidden sm:block font-medium text-gray-900 dark:text-gray-100 hover:scale-101"
             >
               {link.title}
             </Link>

@@ -15,6 +15,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      scale: {
+        '101': '1.01',
+      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',
@@ -25,7 +28,7 @@ module.exports = {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
       },
       colors: {
-        primary: colors.orange,
+        primary: colors.green,
         gray: colors.gray,
       },
       typography: ({ theme }) => ({
