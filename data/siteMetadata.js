@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Nexical Space',
   author: 'Marco Lagos',
   headerTitle: 'Nexical Space',
-  description: 'A conduit uniting disparate elements',
+  description: 'A conduit uniting disparate elements.',
   language: 'en-us',
   theme: 'system',
   siteUrl: 'https://nexical.space',
