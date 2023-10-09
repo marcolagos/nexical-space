@@ -9,17 +9,13 @@ export default function NotFound() {
         </h1>
       </div>
       <div className="max-w-md">
-        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          This page does not exist.
-        </p>
-        <p className="mb-8">
-          However, there are still other profound elements in the nexical space.
-        </p>
+        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">Not Found</p>
+        <p className="mb-8">This page does not exist.</p>
         <Link
           href="/"
-          className="focus:shadow-outline-blue inline rounded-lg border border-transparent px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors bg-gray-900 duration-150 hover:bg-orange-100 focus:outline-none dark:hover:bg-gray-800"
+          className="focus:shadow-outline-blue inline rounded-lg border border-transparent px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors bg-gray-900 duration-150 hover:bg-gray-700 focus:outline-none dark:hover:bg-gray-800"
         >
-          Back to the nexical space
+          Back to home page
         </Link>
       </div>
     </div>
