@@ -42,7 +42,7 @@ export const SocialIcon = ({ kind, href, size = 8 }: SocialIconProps) => {
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg
-        className={`fill-current text-gray-900 dark:text-gray-200 h-${size} w-${size} hover:scale-101`}
+        className={`fill-current text-gray-900 dark:text-gray-200 h-${size} w-${size} hover:scale-105`}
       />
     </a>
   )
