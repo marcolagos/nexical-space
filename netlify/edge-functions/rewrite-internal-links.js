@@ -1,4 +1,4 @@
-const { rewriteUrl } = require('@netlify/functions')
+import { rewriteUrl } from '@netlify/functions'
 
 exports.handler = async (event) => {
   const { request } = event
