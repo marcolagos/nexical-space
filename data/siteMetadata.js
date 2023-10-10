@@ -23,9 +23,6 @@ const siteMetadata = {
       umamiWebsiteId: process.env.NEXT_UMAMI_ID,
     },
   },
-  // newsletter: {
-  // provider: 'buttondown',
-  // },
   search: {
     provider: 'kbar',
     kbarConfig: {
