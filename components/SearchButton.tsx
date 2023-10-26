@@ -9,12 +9,8 @@ import useSound from 'use-sound'
 const SearchButton = () => {
   const [ThemeSound] = useSound('/static/sounds/open.mp3')
 
-  if (
-    siteMetadata.search &&
-    (siteMetadata.search.provider === 'algolia' || siteMetadata.search.provider === 'kbar')
-  ) {
-    const SearchButtonWrapper =
-      siteMetadata.search.provider === 'algolia' ? AlgoliaButton : KBarButton
+  if (siteMetadata.search) {
+    const SearchButtonWrapper = KBarButton
 
     return (
       <SearchButtonWrapper aria-label="Search">

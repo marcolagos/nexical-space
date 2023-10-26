@@ -6,7 +6,7 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import Container from '@/components/Container'
 import siteMetadata from '@/data/siteMetadata'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import ScrollTopAndBottom from '@/components/ScrollTopAndBottom'
 
 interface LayoutProps {
   content: CoreContent<Reference>
@@ -20,7 +20,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
 
   return (
     <Container>
-      <ScrollTopAndComment />
+      <ScrollTopAndBottom />
       <article>
         <div>
           <header>

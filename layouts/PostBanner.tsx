@@ -7,7 +7,7 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import Container from '@/components/Container'
 import siteMetadata from '@/data/siteMetadata'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import ScrollTopAndBottom from '@/components/ScrollTopAndBottom'
 
 interface LayoutProps {
   content: CoreContent<Reference>
@@ -23,7 +23,7 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
 
   return (
     <Container>
-      <ScrollTopAndComment />
+      <ScrollTopAndBottom />
       <article>
         <div>
           <div className="space-y-1 pb-10 text-center dark:border-gray-700">

@@ -48,6 +48,13 @@ module.exports = {
             h3: {
               fontWeight: '600',
             },
+            h4: {
+              fontWeight: '800',
+              fontSize: theme('fontSize.md'),
+            },
+            p: {
+              fontWeight: '400',
+            },
             code: {
               color: theme('colors.indigo.500'),
             },
