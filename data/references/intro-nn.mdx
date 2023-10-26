@@ -8,7 +8,7 @@ summary: Understanding the basics of Neural Networks
 
 # Introduction
 
-In our nervous system, we have neurons, connected by axons and dendrites. The connecting regions are called synapses. And when these something happens, some stimuli, these neurons fire and the strength of the synaptic regions changes. This is our process of learning - artificial neural networks imitate this process.
+In our nervous system, we have neurons, connected by axons and dendrites. The connecting regions are called synapses. And when a stimuli occurs, these neurons fire and the strength of the synaptic regions changes. This is our process of learning - artificial neural networks imitate this process.
 
 <TOCInline toc={props.toc} exclude="Introduction" />
 
@@ -22,7 +22,7 @@ Consider a dataset $\mathbb{D} = \{(x^{(i)}, y^{(i)}) | 1 \leq i \leq m, x \in \
 
 ## Single-layer Neural Network
 
-This is the simplest neural network. It has 1 input layer (not counted), 1 output node. Consider training instance of the form $(x^{(i)}, y^{(i)})$, where each $x^{(i)} = [x_1^{(i)},...,x_d^{(i)}]$ contains $d$ features, and $y^{(i)} \in \{ -1, +1 \}$ is an observed binary value. The input layer contains $d$ nodes representing the $d$ features with edges of weight $W^T = [w_1,...,w_d]$ connecting the input nodes to the output node. In addition, there are many times a bias term $b$ (the invariant part of the prediction) is included. The bias term is a constant value that is added to the linear function. The bias term is represented by a node, called the **bias neuron** with a constant value of 1, and an edge of weight $b$ connecting it to the output node.
+This is the simplest neural network. It has 1 input layer (not counted) and output node. Consider training instance of the form $(x^{(i)}, y^{(i)})$, where each $x^{(i)} = [x_1^{(i)},...,x_d^{(i)}]$ contains $d$ features, and $y^{(i)} \in \{ -1, +1 \}$ is an observed binary value. The input layer contains $d$ nodes representing the $d$ features with edges of weight $W^T = [w_1,...,w_d]$ connecting the input nodes to the output node. In addition, there are many times a bias term $b$ (the invariant part of the prediction) is included. The bias term is a constant value that is added to the linear function. The bias term is represented by a node, called the **bias neuron** with a constant value of 1, and an edge of weight $b$ connecting it to the output node.
 
 <ModeImage filename="perceptron.png" />
 
@@ -160,7 +160,7 @@ MBGD is the most used variant. The choice of batch-size $\beta$ and learning rat
 
 In the case of our single-layer classifier, our **activation function** was the sign function. And this makes sense, given that a binary class label needs to be predicted. However, there are many different types of situations where different target variables need to be predicted.
 
-If we want to predict a continuous value, we would need a different activation function, such as an identity activation function. The resulting neural network would just be a linear regression model. If we want to predict a probability, we would need a sigmoid activation function. If we want to predict a class label, we would need a softmax activation function. For different situations, there are different activation functions. This is crucial when considering multi-layered neural networks. If a network only used linear activations, then it would the same as using a simple linear regression model.
+If we want to predict a continuous value, we would need a different activation function, such as an identity activation function. The resulting neural network would just be a linear regression model. If we want to predict a probability, we would need a sigmoid activation function. If we want to predict a class label, we would need a softmax activation function. For different situations, there are different activation functions. This is crucial when considering multi-layered neural networks. If a network only used linear activations, then it would be the same as using a simple linear regression model.
 
 The greek letter $\bm{\phi}$ denotes an activation function:
 
@@ -185,7 +185,7 @@ ReLU is used most widely used for the advantages it offers:
 - Has a gradient of either $0$ (for negative values) or $1$ (for positive values), which helps mitigate the vanishing gradient problem
 - Inherently introduces sparsity (many neurons will have a value of $0$), which can reduce overfitting
 
-ReLU does have "dying ReLU" problem. This refers to the problem where neurons in a network can sometimes output a constant zero value for all inputs — essentially becoming inactive and no longer updating during training. This can be mitigated by using leaky ReLU, where $\alpha$ is a small constant ($0.1$, $0.01$, etc.):
+ReLU does have the "dying ReLU" problem. This refers to the problem where neurons in a network can sometimes output a constant zero value for all inputs — essentially becoming inactive and no longer updating during training. This can be mitigated by using leaky ReLU, where $\alpha$ is a small constant ($0.1$, $0.01$, etc.):
 
 $$
 \bm{\phi}(z) = \text{max}(\alpha z, z)
