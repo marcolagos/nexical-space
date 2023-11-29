@@ -1,0 +1,39 @@
+---
+title: Linear Discriminant Analysis (LDA)
+date: '2023-10-14'
+tags: ['Machine Learning', 'Linear Models']
+draft: true
+summary: Understanding what linear discriminant analysis is and how it works.
+---
+
+# Introduction
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## notes
+
+- https://sebastianraschka.com/Articles/2014_python_lda.html
+- http://weixingsong.weebly.com/uploads/7/4/3/5/7435707/modern_multivariate_analysis.pdf
+- https://chat.openai.com/c/13326a3c-2fc3-4478-a9a7-fb05b752b852
+
+Linear Discriminant Analysis (LDA) is a supervised learning algorithm used for classification tasks in machine learning. It is a technique used to find a linear combination of features that best separates the classes in a dataset.
+LDA works by projecting the data onto a lower-dimensional space that maximizes the separation between the classes. It does this by finding a set of linear discriminants that maximize the ratio of between-class variance to within-class variance. In other words, it finds the directions in the feature space that best separate the different classes of data.
+LDA assumes that the data has a Gaussian distribution and that the covariance matrices of the different classes are equal. It also assumes that the data is linearly separable, meaning that a linear decision boundary can accurately classify the different classes.
+
+<a href="/static/artifacts/lda_fisher.pdf" target="_blank">
+  this is a link
+</a>
+
+LDA has several advantages, including:
+It is a simple and computationally efficient algorithm.
+It can work well even when the number of features is much larger than the number of training samples.
+It can handle multicollinearity (correlation between features) in the data.
+
+However, LDA also has some limitations, including:
+It assumes that the data has a Gaussian distribution, which may not always be the case.
+It assumes that the covariance matrices of the different classes are equal, which may not be true in some datasets.
+It assumes that the data is linearly separable, which may not be the case for some datasets.
+It may not perform well in high-dimensional feature spaces.
+
+Linear Discriminant Analysis or Normal Discriminant Analysis or Discriminant Function Analysis is a dimensionality reduction technique that is commonly used for supervised classification problems. It is used for modelling differences in groups i.e. separating two or more classes. It is used to project the features in higher dimension space into a lower dimension space.
+For example, we have two classes and we need to separate them efficiently. Classes can have multiple features. Using only a single feature to classify them may result in some overlapping as shown in the below figure. So, we will keep on increasing the number of features for proper classification.

@@ -14,6 +14,7 @@ const SearchButton = () => {
 
     return (
       <SearchButtonWrapper aria-label="Search">
+        {/* Produces button nested button error */}
         <button
           className="block cursor-pointer"
           onClick={() => {

@@ -1,0 +1,41 @@
+---
+title: Introduction to Recurrent Neural Networks
+date: '2023-10-25'
+tags: ['Recurrent Neural Networks', 'Deep Learning', 'Machine Learning', 'Neural Networks', 'RNN']
+draft: true
+summary: Understanding the basics of Recurrent Neural Networks
+---
+
+## Introduction
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+If you aren't familiar with neural networks, see <a href="/references/intro-nn" target="_blank">Introduction to Neural Networks</a>. A recurrent neural network (RNN) is a type of neural network that is designed to capture the relationship in sequential data, like text, audio, or time series. The main feature in RNNs is the hidden state kept across iterations, allowing the network to "remember" past information and make use of it. This is in contrast to feedforward neural networks, which only have information from the current input.
+
+## How does an RNN work?
+
+The basic idea behind RNN is simple. At each step $t$, the RNN takes input $x_i$ and hidden state $h_{t-1}$, and outputs the next hidden state $h_t$ and the prediction $y_t$. Some basic equations representing this process is:
+
+$$
+h_t = \text{ tanh}(W_{hh}h_{t-1} + W_{xh}x_t + b_h)
+$$
+
+$$
+y_t = W_{hy}h_t + b_y
+$$
+
+- $W_{hh}$ is a weight matrix for the hidden state
+- $W_{xh}$ is a weight matrix for the input
+- $W_{hy}$ is a weight matrix for the output
+- $b_h$ is a bias vector for the hidden state
+- $b_y$ is a bias vector for the output
+
+## Problems with vanilla RNNs
+
+While the idea behind RNNs is quite useful, basic RNNs have two main issues:
+
+1. **Vanishing Gradient Problem**: For _long_ sequences, RNNs can forget what was seen in earlier steps. This is because, during backpropagation, gradients can become too small (vanish). This is especially a problem for long sequences, as the gradients are multiplied by the same weight matrix at each step.
+
+2. **Exploding Gradient Problem**: Sometimes, the opposite happens and the gradients become too large, causing the model weights to update in huge steps.
+
+To address these issues, more complex RNN architectures like LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Units) are used. Let's just understand a basic RNN though.
